@@ -9,7 +9,7 @@ export default function RoundLogoSet() {
             className="flex flex-col items-center justify-center mt-6 mb-4 pt-10 px-4 max-w-[1200px] mx-auto w-full"
         >
             <h6 className="font-archivo font-bold text-xl sm:text-2xl md:text-3xl text-text-black-primary text-left">
-                Skill Set
+                Skills Set
             </h6>
             <div className="flex flex-wrap justify-center items-center max-w-[1200px] mx-auto gap-4 p-4 mt-6">
 
