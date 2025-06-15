@@ -10,8 +10,36 @@ export default function Enquiry() {
     const [statusMessage, setStatusMessage] = useState("");
     const [showMessage, setShowMessage] = useState(false);
 
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // List of common disposable email domains (can be expanded)
+        const disposableDomains = [
+            "mailinator.com",
+            "10minutemail.com",
+            "guerrillamail.com",
+            "tempmail.com",
+            "throwawaymail.com",
+            "trashmail.com",
+            "yopmail.com",
+        ];
+
+        if (!regex.test(email)) return false;
+
+        const domain = email.split("@")[1].toLowerCase();
+        return !disposableDomains.includes(domain);
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
+        const email = form.current.user_email.value;
+
+        const isValid = validateEmail(email);
+        if (!isValid) {
+            setStatusMessage("Please enter a valid, non-temporary email address.");
+            setShowMessage(true);
+            return;
+        }
 
         emailjs
             .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
