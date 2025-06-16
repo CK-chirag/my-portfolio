@@ -35,7 +35,7 @@ export default function Header() {
                 <div className="hidden sm:flex items-center gap-6">
                     <button
                         onClick={handleTechClick}
-                        className="rounded-3xl border border-black-primary bg-transparent text-text-black-primary font-medium text-[12px] px-6 py-2 cursor-pointer hover:underline hover:shadow-lg hover:scale-105 transition duration-200"
+                        className="rounded-3xl border border-black-primary bg-transparent text-text-black-primary font-medium text-[12px] px-6 py-3 cursor-pointer hover:underline hover:shadow-lg hover:scale-105 transition duration-200"
                     >
                         View My Tech Experience
                     </button>
@@ -46,7 +46,7 @@ export default function Header() {
                                 "_blank"
                             )
                         }
-                        className="rounded-3xl bg-[#000F27] text-white font-normal text-[12px] px-6 py-2 cursor-pointer hover:underline"
+                        className="rounded-3xl bg-[#000F27] text-white font-normal text-[12px] px-6 py-3 cursor-pointer hover:underline"
                     >
                         View My Resume
                     </button>
